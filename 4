@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function add(){
+var a=document.getElementById("weddingEvent").value;
+var b=document.getElementById("corporateEvent").value;
+var r=parseInt(a);
+var p=parseInt(b);
+var c=r+p;
+document.write(c);
+}
+</script>	
+</head>
+	<!-- fill your code here-->
+    <body>
+    <h2>Adding the Events</h2>
+    <label>Number of Wedding events </label><input type="text" id="weddingEvent"><br>
+ <label>Number of Corporate events </label><input type="text" id="corporateEvent"><br>
+ <Button id="add" onclick="add()">Add</Button>
+</body>
+</html>
