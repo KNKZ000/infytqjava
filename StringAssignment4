@@ -1,0 +1,27 @@
+import java.util.Arrays;
+import java.util.*;
+import java.util.Collections;
+class Tester {
+
+	public static int findHighestOccurrence(String str){
+		char[] a=str.toCharArray();
+		Arrays.sort(a);
+		int[] count=new int[str.length()];
+		for(int i=0;i<a.length;i++)
+		{
+		    for(int j=0;j<a.length;j++)
+		    {
+		        if(a[j]==a[i])
+		        count[j]++;
+		    }
+		}
+		Arrays.sort(count);
+		int max=count[count.length-1];
+        return max;
+	}
+	
+	public static void main(String args[]){
+	    String str = "success";
+	    System.out.println(findHighestOccurrence(str));
+	}
+}
