@@ -1,0 +1,37 @@
+class Tester {
+    
+   public static int[] findLeapYears(int year){
+       int[] leap=new int[15];
+       int i=0;
+       while(i<15)
+       {
+           if(year%4==0)
+           {
+               if(year%100==0)
+               {
+                   if(year%400==0)
+                   {
+                       leap[i]=year;
+                       i++;
+                   }
+               }
+               else
+               {
+               leap[i]=year;
+               i++;
+               }
+           }
+           year++;
+       }
+       return leap;
+   }
+    
+   public static void main(String[] args) {
+       int year = 2000;
+	   int[] leapYears;
+	   leapYears=findLeapYears(year);
+	   for ( int index = 0; index<leapYears.length-1; index++ ) {
+	       System.out.println(leapYears[index]);
+	   }
+    }
+}
