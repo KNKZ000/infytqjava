@@ -1,0 +1,23 @@
+import java.util.*;
+class Tester{
+    public static String removeDuplicatesandSpaces(String str){
+        //Implement your code here and change the return value accordingly
+        ArrayList<Integer> arr=new ArrayList<>();
+        for(int i=0;i<str.length();i++)
+        {
+            if(arr.contains((int)str.charAt(i))||str.charAt(i)==' ')
+            continue;
+            else
+            arr.add((int)str.charAt(i));
+        }
+        String k="";
+        for(int i=0;i<arr.size();i++)
+        k=k+(char)arr.get(i).intValue();
+        return k;
+	}
+	
+	public static void main(String args[]){
+	    String str = "object oriented programming";
+	    System.out.println(removeDuplicatesandSpaces(str));
+	}
+}
